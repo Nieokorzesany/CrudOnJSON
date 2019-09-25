@@ -19,7 +19,7 @@ app.get("/getNote", function(req, res) {
 
 app.post("/updateNote/:note", function(req, res) {
   stringifyFile += req.params.note;
-  fs.writeFile("./package.json", stringifyFile, function(err) {
+  fs.writeFile("./test.json", stringifyFile, function(err) {
     if (err) throw err;
     res.send(stringifyFile);
   });
